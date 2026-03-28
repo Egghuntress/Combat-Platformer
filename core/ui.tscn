@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://04k1al1285kv"]
+
+[ext_resource type="Script" uid="uid://b2j6hvjn5qu6p" path="res://core/ui.gd" id="1_8q6qc"]
+
+[node name="UI" type="Control" unique_id=1965657141]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 559.0
+offset_bottom = 336.0
+script = ExtResource("1_8q6qc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=828680633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=253663916]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -33.0
+offset_right = 21.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=846165095]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=515892704]
+layout_mode = 2
+text = "Quit
+"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
