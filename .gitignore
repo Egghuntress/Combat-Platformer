@@ -1,16 +1,38 @@
-# Godot 4+ specific ignores
-.godot/
-.nomedia
-
+# --- Godot ---
 # Godot-specific ignores
+.godot/
 .import/
-export.cfg
-export_credentials.cfg
-
-# Imported translations (automatically generated from CSV files)
-*.translation
-
-# Mono-specific ignores
+export_presets.cfg
+# If you use C#
 .mono/
-data_*/
-mono_crash.*.json
+*.gen.cpp
+*.gen.h
+
+# --- Krita ---
+# Krita creates hidden autosave files and backup files
+.krita-autosave/
+*.kra~
+*.myb~
+
+# --- FL Studio ---
+# FL Studio doesn't have many "junk" files, but it creates backups
+# and stores local settings you shouldn't share.
+*/ProjectData/Backup/
+*.flp~
+*.fst~
+# Ignore exported audio if you want to keep the repo light
+*.wav
+*.mp3
+*.flac
+
+# --- Inkle (Inky Editor) ---
+# Usually generates a .json file for Godot/Unity to read. 
+# You might want to keep the .ink files but ignore the autosaves.
+*.ink~
+# If Inky generates a temporary build folder
+/ink_build/
+
+# --- General System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
