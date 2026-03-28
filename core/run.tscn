@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dned3yytttvfi"]
+
+[ext_resource type="Script" uid="uid://cr27ynv46lchl" path="res://core/main.gd" id="1_ifad6"]
+[ext_resource type="PackedScene" uid="uid://dnjysexmecvt7" path="res://systems/level_manager/level_manager.tscn" id="2_dfvqe"]
+[ext_resource type="PackedScene" uid="uid://cl75wyoo1d0ab" path="res://core/level_container.tscn" id="3_v5rwk"]
+[ext_resource type="Script" uid="uid://d16pwbmd0tidt" path="res://systems/level_manager/level_manager.gd" id="3_ya7e1"]
+[ext_resource type="Script" uid="uid://bit4qairxvce3" path="res://core/level_container.gd" id="5_8v3vj"]
+[ext_resource type="PackedScene" uid="uid://04k1al1285kv" path="res://core/ui.tscn" id="6_qmor5"]
+
+[node name="Run" type="Node" unique_id=386422861]
+script = ExtResource("1_ifad6")
+
+[node name="LevelManager" parent="." unique_id=1445190483 instance=ExtResource("2_dfvqe")]
+script = ExtResource("3_ya7e1")
+
+[node name="LevelContainer" parent="." unique_id=1399315212 instance=ExtResource("3_v5rwk")]
+script = ExtResource("5_8v3vj")
+
+[node name="UI" parent="." unique_id=1965657141 instance=ExtResource("6_qmor5")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
